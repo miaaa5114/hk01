@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args) {
+           String temp="";
+    	   Scanner sc=new Scanner(System.in);
+    	   
+    	   System.out.println("這是可以陪你聊天程式!你可以問我一些問題");
+    	       while(true) {
+    	    	   System.out.print("你說:");
+    	    	   temp=sc.nextLine();
+    	    	   
+    	    	   String asdf=temp.replaceAll("嗎", "")
+                                   .replace("會不會", "會")
+                                   .replace("能不能", "能")
+                                   .replace("你能", "我能")
+                                   .replace("你會", "我會")
+                                   .replace("?", "！");
+    	    	   
+    	    	   System.out.println("我說:"+asdf);
+    	    	    	  
+    	    	    if(temp.equals("0")) {
+    	    		   System.out.print("離開聊天程序");
+    	    		   break;
+    	    	   }
+    	       }
+    }
+}
